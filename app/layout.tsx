@@ -1,8 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
+// If you want to use Geist fonts, you can import them from @next/font/google or use a custom font loader.
+// Example using @next/font/google (Next.js 13+):
+import { Inter } from "next/font/google"
+
+const GeistSans = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const GeistMono = Inter({ subsets: ["latin"], variable: "--font-mono" })
+import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 import "./globals.css"
 
